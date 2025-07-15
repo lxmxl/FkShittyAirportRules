@@ -8,7 +8,7 @@
 ## 使用说明
 
 ### 替换订阅地址
-在 `proxy-providers` 部分，找到 `Airport0` 的配置项，将其中 `url` 字段的 `"机场订阅地址"` 替换为你自己的机场订阅链接。示例如下：
+下载MYrules.yaml文件，在 `proxy-providers` 部分，找到 `Airport0` 的配置项，将其中 `url` 字段的 `"机场订阅地址"` 替换为你自己的机场订阅链接。示例如下：
 ```yaml
 proxy-providers:
   Airport0:
