@@ -1,4 +1,4 @@
-# FkShittyAirportRules
+# 面向小白的Clash分流配置模版
 # MYrules.yaml 配置文件说明
 
 ## 简介
