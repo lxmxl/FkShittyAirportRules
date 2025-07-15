@@ -22,7 +22,6 @@ proxy-providers:
 ```
 ## 说明
 ### 规则集使用说明
-本项目规则集（RULE-SET）的数据主要来源于项目 [@Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)。
 本项目使用了 [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) 开源规则集，该规则集为 Clash 配置提供了丰富且实用的规则列表，涵盖了直连域名、代理域名、广告域名等多种类型的规则，能有效帮助用户对网络流量进行分流和管控。
 
 ### 测试情况说明
