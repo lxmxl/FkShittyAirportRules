@@ -25,7 +25,7 @@ proxy-providers:
 
 ## 说明
 ### 规则集使用说明
-本项目使用了 [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) 开源规则集，该规则集为 Clash 配置提供了丰富且实用的规则列表，涵盖了直连域名、代理域名、广告域名等多种类型的规则，能有效帮助用户对网络流量进行分流和管控。
+本项目使用了每日更新的 [Loyalsoldier/clash-rules](https://github.com/Loyalsoldier/clash-rules) 开源规则集，该规则集为 Clash 配置提供了丰富且实用的规则列表，涵盖了直连域名、代理域名、广告域名等多种类型的规则，能有效帮助用户对网络流量进行分流和管控。
 
 ### 测试情况说明
 目前本项目的规则配置仅在以下两款软件中进行了测试：
