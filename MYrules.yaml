@@ -14,20 +14,61 @@ proxy-providers:
       enable: true
       url: http://www.gstatic.com/generate_204
       interval: 300
+    override:
+      additional-prefix: "BY"
+  Airport1:
+    type: http
+    path: ./ProxySet/MYrules/MYrules_V1.yaml
+    url: "机场订阅地址" #替换为实际的订阅链接
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+    override:
+      additional-prefix: "良"
+  Airport2:
+    type: http
+    path: ./ProxySet/MYrules/MYrules_V1.yaml
+    url: "机场订阅地址" #替换为实际的订阅链接
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+    override:
+      additional-prefix: "鸡"
+  Airport3:
+    type: http
+    path: ./ProxySet/MYrules/MYrules_V1.yaml
+    url: "机场订阅地址" #替换为实际的订阅链接
+    health-check:
+      enable: true
+      url: http://www.gstatic.com/generate_204
+      interval: 300
+    override:
+      additional-prefix: "赔"
 
 proxy-groups:
   - name: PROXY
     type: select
     use:
       - Airport0
+      - Airport1
+      - Airport2
+      - Airport3
   - name: CiciAI
     type: select
     use:
       - Airport0
+      - Airport1
+      - Airport2
+      - Airport3
   - name: Gemini
     type: select
     use:
       - Airport0
+      - Airport1
+      - Airport2
+      - Airport3
     
 
 rule-providers:
