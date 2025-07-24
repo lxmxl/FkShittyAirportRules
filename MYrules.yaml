@@ -24,9 +24,19 @@ proxy-groups:
     type: select
     use:
       - Airport0
+  - name: Gemini
+    type: select
+    use:
+      - Airport0
     
 
 rule-providers:
+  Gemini:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml"
+    path: ./ruleset/Gemini.yaml
+    interval: 86400
   CiciAI:
     type: http
     behavior: classical
@@ -126,6 +136,7 @@ rule-providers:
     interval: 86400
 
 rules:
+  - RULE-SET,Gemini,Gemini
   - RULE-SET,CiciAI,CiciAI
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
