@@ -8,7 +8,7 @@ external-controller: '127.0.0.1:9090'
 proxy-providers:
   Airport0:
     type: http
-    path: ./ProxySet/MYrules/MYrules.yaml
+    path: ./ProxySet/MYrules/MYrules_V1.yaml
     url: "机场订阅地址" #替换为实际的订阅链接
     health-check:
       enable: true
@@ -20,9 +20,20 @@ proxy-groups:
     type: select
     use:
       - Airport0
+  - name: CiciAI
+    type: select
+    use:
+      - Airport0
     
 
 rule-providers:
+  CiciAI:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/lxmxl/FkShittyAirportRules/refs/heads/main/CiciAI.yaml"
+    path: ./ruleset/CiciAI.yaml
+    interval: 86400
+
   reject:
     type: http
     behavior: domain
@@ -115,6 +126,7 @@ rule-providers:
     interval: 86400
 
 rules:
+  - RULE-SET,CiciAI,CiciAI
   - RULE-SET,applications,DIRECT
   - DOMAIN,clash.razord.top,DIRECT
   - DOMAIN,yacd.haishan.me,DIRECT
